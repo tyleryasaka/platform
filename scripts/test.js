@@ -17,7 +17,7 @@ const start = async () => {
     console.log('Tests passed. :)')
   }
   catch(error) {
-    console.log(`Tests failed.\n\n${error}`)
+    throw new Error(`Tests failed.\n\n${error}`)
   }
   if (daemon) {
     daemon.kill()
