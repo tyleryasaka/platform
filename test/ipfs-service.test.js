@@ -31,7 +31,7 @@ describe("IpfsService", () => {
     listings.forEach(({ data, ipfsHash }) => {
       it("should successfully submit file", async () => {
         const submittedHash = await ipfsService.submitFile(data)
-        expect(submittedHash).to.equal(ipfsHash)
+        expect(submittedHash).to.equal("gibberish")
 
         const cachedData = await ipfsService.getFile(submittedHash)
         expect(cachedData).to.deep.eql(data)
