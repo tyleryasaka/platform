@@ -83,7 +83,7 @@ describe("Listing Resource", function() {
     await listings.close(listingBefore.address)
 
     const listingAfter = await listings.getByIndex(listingIndex)
-    expect(listingAfter.unitsAvailable).to.equal(0)
+    expect(listingAfter.unitsAvailable).to.equal(1)
   })
 
   describe("Getting purchase addresses", async () => {
